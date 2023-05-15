@@ -1,19 +1,28 @@
+import 'package:provider/provider.dart';
+import 'package:test_app/src/recetas_provider.dart';
 import 'package:test_app/src/screen/menu.dart';
 import 'package:flutter/material.dart';
-import 'package:test_app/src/screen/recetas.dart';
+import 'package:test_app/src/widgets/my_card.dart';
+
+Map addDayInProps(String day ,Map oldProps){
+  oldProps["day"] = day;
+  debugPrint(day);
+  return oldProps; 
+}
 
 class Semana extends StatelessWidget {
   const Semana({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final recetasProvider = Provider.of<RecetasProvider>(context); 
     Size size = MediaQuery.of(context).size;
-    final Map args = ModalRoute.of(context)?.settings.arguments as Map;
-    final int index = args['index'] as int;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Semana $index'),
+        title: Text("Semana ${recetasProvider.weekIndex}"),
+        
       ),
       drawer: const Menu(),
       body: Padding(
@@ -23,11 +32,14 @@ class Semana extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Column(
                 children: [
-                  Cuadrito(
+                  MyCard(
                     size: size,
-                    index: 0,
                     route: 'dia',
                     text: 'Lunes',
+                    indexData: {
+                      ...recetasProvider.indexData,
+                      "dayIndex": 1,
+                    },
                   ),
                 ],
               ),
@@ -36,11 +48,14 @@ class Semana extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Cuadrito(
+                  MyCard(
                     size: size,
-                    index: 0,
                     route: 'dia',
                     text: 'Martes',
+                    indexData: {
+                      ...recetasProvider.indexData,
+                      "dayIndex": 2,
+                    },
                   ),
                 ],
               ),
@@ -52,11 +67,14 @@ class Semana extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Column(
                 children: [
-                  Cuadrito(
+                  MyCard(
                     size: size,
-                    index: 0,
                     route: 'dia',
                     text: 'Miercoles',
+                    indexData: {
+                      ...recetasProvider.indexData,
+                      "dayIndex": 3,
+                    },
                   ),
                 ],
               ),
@@ -66,11 +84,14 @@ class Semana extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Cuadrito(
+                  MyCard(
                     size: size,
-                    index: 0,
                     route: 'dia',
                     text: 'Jueves',
+                    indexData: {
+                      ...recetasProvider.indexData,
+                      "dayIndex": 4,
+                    },
                   ),
                 ],
               ),
@@ -82,11 +103,14 @@ class Semana extends StatelessWidget {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Column(
                 children: [
-                  Cuadrito(
+                  MyCard(
                     size: size,
-                    index: 0,
                     route: 'dia',
                     text: 'Viernes',
+                    indexData: {
+                      ...recetasProvider.indexData,
+                      "dayIndex": 5,
+                    },
                   ),
                 ],
               ),
@@ -96,11 +120,14 @@ class Semana extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Cuadrito(
+                  MyCard(
                     size: size,
-                    index: 0,
                     route: 'dia',
-                    text: 'Otras recetas'
+                    text: 'Otras recetas',
+                    indexData: {
+                      ...recetasProvider.indexData,
+                      "dayIndex": 6,
+                    },
                   ),
                 ],
               ),
