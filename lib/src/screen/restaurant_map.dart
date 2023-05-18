@@ -25,7 +25,7 @@ class RestaurantMap extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: GridView.count(
               crossAxisCount: 2,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               childAspectRatio: 3 / 1.8,
               children: [
                 ClipRRect(
