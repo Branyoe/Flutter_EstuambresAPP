@@ -1,9 +1,9 @@
-import 'package:test_app/src/screen/menu.dart';
+import 'package:test_app/src/screen/drawer.dart';
 import 'package:flutter/material.dart';
 
 //MyWidget asi se va a mandar a llamar en los otros archivos//
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
 // Un widget es un objeto visual y de diseño que representa una parte de la interfaz de usuario de una aplicación, y se utiliza para construir la estructura visual de la aplicación.//
@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
       ),
     ),
     //funcion del drawer(menu lateral)//
-      drawer: const Menu(),
+      drawer: const MyDrawer(),
   );
  }
 }

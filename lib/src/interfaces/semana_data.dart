@@ -1,3 +1,0 @@
-// class SemanaData {
-//   const SemanaData({})
-// }

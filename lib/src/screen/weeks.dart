@@ -1,6 +1,6 @@
 import 'package:provider/provider.dart';
 import 'package:test_app/src/recetas_provider.dart';
-import 'package:test_app/src/screen/menu.dart';
+import 'package:test_app/src/screen/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:test_app/src/widgets/my_card.dart';
 
@@ -10,8 +10,8 @@ Map addDayInProps(String day ,Map oldProps){
   return oldProps; 
 }
 
-class Semana extends StatelessWidget {
-  const Semana({super.key});
+class Weeks extends StatelessWidget {
+  const Weeks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class Semana extends StatelessWidget {
         title: Text("Semana ${recetasProvider.weekIndex}"),
         
       ),
-      drawer: const Menu(),
+      drawer: const MyDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

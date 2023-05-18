@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:test_app/src/recetas_provider.dart';
-import 'package:test_app/src/screen/menu.dart';
+import 'package:test_app/src/screen/drawer.dart';
 import 'package:test_app/src/utils/list_to_ul.dart';
-import '../recetas_data.dart';
+import 'package:test_app/src/recetas_data.dart';
+import 'package:test_app/src/utils/day_index_to_day_name.dart';
 
-class Dia extends StatelessWidget {
-  const Dia({super.key});
+class Day extends StatelessWidget {
+  const Day({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class Dia extends StatelessWidget {
             style: STYLES["AppBarTitle"],
           ),
         ),
-        drawer: const Menu(),
+        drawer: const MyDrawer(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start, 
           children: [
@@ -152,16 +153,3 @@ const Map STYLES = {
     
   )
 };
-
-String dayIndexToDayName(int index) {
-  Map dayNames = {
-    0: 'null',
-    1: 'Lunes',
-    2: 'Martes',
-    3: 'Miercoles',
-    4: 'Jueves',
-    5: 'Viernes',
-    6: 'Otras recetas',
-  };
-  return dayNames[index];
-}

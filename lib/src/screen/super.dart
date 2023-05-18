@@ -1,4 +1,4 @@
-import 'package:test_app/src/screen/menu.dart';
+import 'package:test_app/src/screen/drawer.dart';
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +11,7 @@ class Super extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Compras'),
       ),
-      drawer: const Menu(),
+      drawer: const MyDrawer(),
       );
   }
 }

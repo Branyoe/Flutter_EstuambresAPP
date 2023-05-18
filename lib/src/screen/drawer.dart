@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Menu extends StatelessWidget {
-  const Menu({
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({
     super.key,
   });
   //para que funcione el menu lateral (drawer)//

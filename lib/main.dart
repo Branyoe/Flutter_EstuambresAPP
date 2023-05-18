@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/src/recetas_provider.dart';
-import 'package:test_app/src/screen/dia.dart';
-import 'package:test_app/src/screen/inicio.dart';
-import 'package:test_app/src/screen/recetas.dart';
-import 'package:test_app/src/screen/resta.dart';
-import 'package:test_app/src/screen/semana.dart';
+import 'package:test_app/src/screen/day.dart';
+import 'package:test_app/src/screen/home.dart';
+import 'package:test_app/src/screen/recipes.dart';
+import 'package:test_app/src/screen/restaurant_map.dart';
+import 'package:test_app/src/screen/restaurants.dart';
+import 'package:test_app/src/screen/weeks.dart';
 import 'package:test_app/src/screen/super.dart';
 
 import 'package:provider/provider.dart';
@@ -29,15 +30,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: const MyHomePage(),
+      home: const Home(),
       initialRoute: 'Inicio',
       routes: {
-        'Inicio': (context) => const MyHomePage(),
-        'Recetas': (context) => const Recetas(),
+        'Inicio': (context) => const Home(),
+        'Recetas': (context) => const Recipes(),
         'Super': (context) => const Super(),
-        'Restau': (context) => const Resta(),
-        'semana': (context) => const Semana(),
-        'dia': (context) => const Dia(),
+        'Restau': (context) => const Restaurants(),
+        'rest_map': (context) => const RestaurantMap(),
+        'semana': (context) => const Weeks(),
+        'dia': (context) => const Day(),
       }
     );
   }

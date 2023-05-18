@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:test_app/src/recetas_provider.dart';
-import 'package:test_app/src/screen/menu.dart';
+import 'package:test_app/src/screen/drawer.dart';
 import 'package:test_app/src/widgets/my_card.dart';
 
-class Recetas extends StatelessWidget {
-  const Recetas({super.key});
+class Recipes extends StatelessWidget {
+  const Recipes({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class Recetas extends StatelessWidget {
         title: const Text('Recetas'),
         
       ),
-      drawer: const Menu(),
+      drawer: const MyDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
