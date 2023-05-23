@@ -33,6 +33,7 @@ class MyCard extends StatelessWidget {
                   ? Image(
                       image: NetworkImage(imagen!),
                       fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) => Center(child: Text(error.toString()),),
                     )
                   : Center(
                       child: Text(
