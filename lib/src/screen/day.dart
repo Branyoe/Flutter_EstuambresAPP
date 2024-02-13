@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:test_app/src/recetas_provider.dart';
 import 'package:test_app/src/screen/drawer.dart';
 import 'package:test_app/src/utils/list_to_ul.dart';
-import 'package:test_app/src/recetas_data.dart';
+import 'package:test_app/src/recetas_dataGOOD.dart';
 import 'package:test_app/src/utils/day_index_to_day_name.dart';
 
 class Day extends StatelessWidget {
